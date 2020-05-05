@@ -3,49 +3,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Drawing 1</title>
-
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-        }
-        video { 
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-            mix-blend-mode: multiply; 
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-                height: auto; 
-        }
-        audio { 
-            z-index: 2;
-            mix-blend-mode: lighten;
-            position: fixed;
-            bottom: 0px;
-            left: auto;
-            right: auto;
-        }
-        canvas {
-            opacity: 80%;
-            border-radius: 65px;
-        }
-        
-    </style>
+    <title>Drawing 2: Land</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/drawing2styles.css" />
   </head>
 
   <body>
       <!-- controls taken out for now-->
       <audio autoplay loop >
-        <source src="audio/HealingWater.mp3" type = "audio/mpeg">
+        <source src="audio/HealingWater-DavidRenda.mp3" type = "audio/mpeg">
       </audio>
       
       <video autoplay muted loop>
@@ -61,44 +26,8 @@
     </div>
       
       
-    <script>
-      const canvas = document.querySelector('canvas');
-      const context = canvas.getContext('2d');
-
-      let width;
-      let height;
-
-      // set the number of canvas pixels, scaled for screen resolution
-      let pxScale = window.devicePixelRatio;
-
-      // use img from DOM
-      const image = document.getElementById('orangetree');
-        
-      function setup() {
-        // fixed canvas size
-        width = canvas.width;
-        height = canvas.height;
-
-        // set the CSS display size
-        canvas.style.width = width + 'px';
-        canvas.style.height = height + 'px';
-
-        canvas.width = width * pxScale;
-        canvas.height = height * pxScale;
-
-        // normalize the coordinate system
-        context.scale(pxScale, pxScale);
-
-        draw();
-      }
-
-      function draw() {
-        // drawing an bitmap image (x, y, width, height)
-        context.drawImage(image, 0, 0, 900, 600);
-      };
-
-      // when the whole page has loaded, including all dependent resources
-      window.addEventListener('load', setup);
-    </script>
+    <!-- add external javascript file -->
+    <script src="js/drawing2.js"></script>
+      
   </body>
 </html>
