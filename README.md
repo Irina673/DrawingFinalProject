@@ -1,7 +1,7 @@
 # DrawingFinalProject
 
 **Drawing on the Web Final Project**
-[View my published project](http://i6.cims.nyu.edu/~id673/drawing/index.html)
+[View my published project](http://i6.cims.nyu.edu/~id673/drawing/DrawingFinalProject/index.html)
 
 :evergreen_tree::sun_with_face::sunflower:
 
